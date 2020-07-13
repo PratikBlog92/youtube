@@ -3,6 +3,7 @@ package com.mapper.converter;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 import com.mapper.dto.StudentDto;
@@ -13,13 +14,18 @@ public class StudentConverter {
 	
 	public StudentDto entityToDto(Student student) {
 		
-		StudentDto dto = new StudentDto();
-		dto.setId(student.getId());
-		dto.setName(student.getName());
-		dto.setUsename(student.getUsername());
-		dto.setPassword(student.getPassword());
+//		StudentDto dto = new StudentDto();
+//		dto.setId(student.getId());
+//		dto.setName(student.getName());
+//		dto.setUsername(student.getUsername());
+//		dto.setPassword(student.getPassword());
+//		
+//		return dto;
 		
-		return dto;
+		ModelMapper mapper =new ModelMapper();
+		StudentDto map = mapper.map(student, StudentDto.class);
+		return map;
+		
 	}
 	public  List<StudentDto> entityToDto(List<Student> student) {
 		
@@ -30,13 +36,17 @@ public class StudentConverter {
 	
 	public Student dtoToEntity(StudentDto dto)
 	{
-		Student st = new Student();
-		st.setId(dto.getId());
-		st.setName(dto.getName());
-		st.setPassword(dto.getPassword());
-		st.setUsername(dto.getUsename());
+//		Student st = new Student();
+//		st.setId(dto.getId());
+//		st.setName(dto.getName());
+//		st.setPassword(dto.getPassword());
+//		st.setUsername(dto.getUsername());
+//		
+//		return st;
 		
-		return st;
+		ModelMapper mapper = new ModelMapper();
+		Student map = mapper.map(dto, Student.class);
+		return map;
 	}
 	
 	public List<Student> dtoToEntity(List<StudentDto> dto)
