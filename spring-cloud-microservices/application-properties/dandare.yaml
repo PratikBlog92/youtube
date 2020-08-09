@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: configuration-server
+
+my:
+    name:
+        is: pratik-dandare-default
