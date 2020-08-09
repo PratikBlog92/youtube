@@ -1,0 +1,21 @@
+{
+  "user": {
+    "name": "pratik",
+    "mobileNumber": "1234567890"
+  },
+
+  "products":
+  [
+    {
+      "name": "Rayzen 7",
+      "prise": "200$"
+    },
+    {
+      "name": "Gigabyte MotherBoard",
+      "prise": "50$"
+    }
+  ],
+
+  "address": "Pune",
+  "isDelivered": false
+}
