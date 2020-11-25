@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config-a
+  cloud:
+    config:
+      profile: dev
+      uri: http://localhost:9000
+  output:
+    ansi:
+      enabled: ALWAYS
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"

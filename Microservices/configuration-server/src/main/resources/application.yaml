@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: configuration-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitlab.com/Pratik.Dandare/youtube-config-server.git
+          username: Pratik.Dandare
+          password: 12345asd
+  output:
+    ansi:
+      enabled: ALWAYS
+
+server:
+  port: 9000
+
