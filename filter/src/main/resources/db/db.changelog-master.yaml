@@ -1,0 +1,17 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 1
+      author: pratik
+
+  - include:
+      file: 001_create_tables.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: 002_Insert_student_address.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: 003_Insert_student.sql
+      relativeToChangelogFile: true
