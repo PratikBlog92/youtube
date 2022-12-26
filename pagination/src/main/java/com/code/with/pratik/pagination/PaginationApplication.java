@@ -44,6 +44,5 @@ public class PaginationApplication implements CommandLineRunner {
 		students.add(Student.builder().name("Pooh").city("Thailand").build());
 
 		studentRepository.saveAll(students);
-
 	}
 }
