@@ -24,8 +24,7 @@ public class PageRequestDto {
         Sort.Direction sort = Objects.nonNull(dto.getSort()) ? dto.getSort() : this.sort;
         String sortByColumn = Objects.nonNull(dto.getSortByColumn()) ? dto.getSortByColumn() : this.sortByColumn;
 
-
-//        PageRequest request = PageRequest.of(page, size);
+        //        PageRequest request = PageRequest.of(page, size);
         PageRequest request = PageRequest.of(page, size, sort, sortByColumn);
 
         return request;
