@@ -1,7 +1,7 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class FailSafe {
 //    Q.3 what is fail-safe ??
@@ -14,24 +14,23 @@ public class FailSafe {
 //    fact that they minimize the possibility of exceptions being thrown.
 //    But that benefit comes with a cost, one of which is increased memory requirement
 
-//    Disadvantages
+    //    Disadvantages
 //    1. Iterator isn’t guaranteed to return updated data from the Collection,
 //      as it’s working on the clone instead of the actual Collection
 //    2. It consumes more memory and time
     public static void main(String[] args) {
-        List<String>  fruits = new ArrayList<>();
+        List<String> fruits = new CopyOnWriteArrayList<>();
         fruits.add("apple");
         fruits.add("banana");
         fruits.add("coconut");
         fruits.add("kiwi");
 
 
-        for (int i = 0; i < fruits.size(); i++) {
-            if (fruits.get(i).equals("banana")) {
-                fruits.remove(fruits.get(i));
+        for (String fruit : fruits) {
+            if(fruit.equals("coconut")){
+                fruits.remove(fruit);
             }
         }
-
         System.out.println(fruits);
     }
 }
