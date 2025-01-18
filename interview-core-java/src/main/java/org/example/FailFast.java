@@ -8,7 +8,8 @@ public class FailFast {
 //    Q.2 what is ConcurrentModificationException ??
 
 //    if something being iterated and modified
-//    at that time throws ConcurrentModificationException
+//    at that time throws
+//    ConcurrentModificationException
 //    this approach called as fail fast
 
 //    if you are traversing collection using iterator
